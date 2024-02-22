@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8241804231512841953}
   - component: {fileID: 7800218665362493879}
-  - component: {fileID: 825092848778171210}
+  - component: {fileID: 7503878131747538656}
   m_Layer: 0
-  m_Name: Missile
+  m_Name: Torped
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 9614e3d32773c7a41ad5349edea97fbd, type: 3}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: e6eb51c0d10ee7c4dbfeefab396ccf1c, type: 3}
+  m_Color: {r: 0.58294755, g: 0.67806005, b: 0.8238993, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &825092848778171210
+--- !u!114 &7503878131747538656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,6 +94,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854457556848647200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81c3953fb7c41894297b21811702a3e8, type: 3}
+  m_Script: {fileID: 11500000, guid: a5b56be2b5105a64b874394d46ef9b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

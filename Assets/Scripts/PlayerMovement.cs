@@ -11,73 +11,92 @@ public class PlayerMovement : MonoBehaviour
 {
     // Init
     private GameObject o;
-    private Vector3 MoveSpeed = Vector3.zero;
-    private float MaxSpeed = 0.04f;
-    private float Accel = 0.05f;
-    private float Drag = 0.1f;
     private Camera c;
     private bool missileRight = false;
-    [SerializeField]
-    public GameObject Missile;
+    [SerializeField] public GameObject Missile;
+    [SerializeField] public GameObject Torpedo;
+    private Vector2 move;
+    private float mass = 5f, force = 400, friction = 300, maxSpeed = 5;
+    private Vector2 accel = Vector2.zero;
+    private Vector2 velocity = Vector2.zero;
+    private float fireTimer = 0;
+    private bool cooldown;
+    [SerializeField] private float cooldownTime = 0.3f;
+    
     private void Awake()
     {
-        
         o = gameObject;
         c = Camera.main;
     }
     
-    // Update is called once per frame
-    void Update()
+    // proper physics code    
+    void MovePlayer()
     {
-        //store input - using ternary to essentially cast a bool to a float (this only works for binary directional inputs)
-        Vector3 move = new ((Input.GetKey("d") ? 1.0f : 0.0f) - (Input.GetKey("a") ? 1.0f : 0.0f), 
-            (Input.GetKey("w") ? 1.0f : 0.0f) - (Input.GetKey("s") ? 1.0f : 0.0f),
-            0);
-        
-        /*
-         * normalizing the directional vector - there is only one type of non-axial movement so we can just multiply
-         * by literal 1 over root 2 to save performance (this only works for binary directional inputs)
-         */
-        if (abs(move.x) + abs(move.y) == 2.0f)
-        {
-            move *= 0.707106781f;
-        }
-        
-        //update speed
-        if(move.x != 0 || move.y != 0)
-        {
-            MoveSpeed += move * (Accel * Time.deltaTime);
+        accel = (move * force - velocity.normalized * friction) / mass;
 
-            //clamp max velocity
-            if(MoveSpeed.magnitude > MaxSpeed) MoveSpeed = MoveSpeed.normalized * MaxSpeed;
-        }
-        else if (MoveSpeed != Vector3.zero) MoveSpeed -= MoveSpeed / Drag * Time.deltaTime ;
+        velocity += accel * Time.deltaTime;
         
+        Vector3 movement = (Vector3)(velocity * Time.deltaTime + accel * Time.deltaTime * Time.deltaTime / 2);
         
-        //bounds checking
-        Vector3 cameraSpace = c.WorldToScreenPoint(o.transform.position + MoveSpeed);
+        Vector3 cameraSpace = c.WorldToScreenPoint(o.transform.position + movement);
         
         if (cameraSpace.y < 0 || cameraSpace.y > c.pixelHeight)
         {
-            MoveSpeed.y = 0;
+            movement.y = 0;
         }
 
         if (cameraSpace.x < 0 || cameraSpace.x > c.pixelWidth)
         {
-            MoveSpeed.x = 0;
+            movement.x = 0;
         }
-            
         
-        //set position
-        o.transform.position += MoveSpeed;
-
+        if (velocity.magnitude > maxSpeed)
+            velocity = velocity.normalized * maxSpeed;
+        
+        if (move == Vector2.zero && velocity.magnitude <= 0.01f)
+            velocity = Vector2.zero;
+        
+        o.transform.position += movement;
+    }
+    
+    
+    // Update is called once per frame
+    void Update()
+    {
+        //store input
+        move = new (Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        
+        //normalize input
+        move = move.normalized;
+        
+        //update speed
+        MovePlayer();
 
         //fire missles
-        if (Input.GetKeyDown(KeyCode.Space))
+        if ((Input.GetKeyDown(KeyCode.Space) || 0.5f < Input.GetAxis("Fire1")) && ! cooldown)
         {
-            Instantiate(Missile, o.transform.position + new Vector3(missileRight ? 0.3f : -0.3f, 0, 0), Quaternion.identity);
+            Instantiate(Missile, o.transform.position + new Vector3(missileRight ? 0.5f : -0.5f, 0, 0), Quaternion.identity);
             missileRight = ! missileRight;
+            cooldown = true;
+        }
+        
+        //fire torpedos
+        if ((Input.GetKeyDown(KeyCode.LeftControl) || 0.5f < Input.GetAxis("Fire2")) && ! cooldown)
+        {
+            Instantiate(Torpedo, o.transform.position + new Vector3(missileRight ? 0.5f : -0.5f, 0, 0), Quaternion.identity);
+            missileRight = ! missileRight;
+            cooldown = true;
+        }
+
+        if (cooldown)
+        {
+            fireTimer += Time.deltaTime;
+            if (fireTimer >= cooldownTime)
+            {
+                cooldown = false;
+                fireTimer = 0;
+            }
         }
 
     }
-}
+} 
