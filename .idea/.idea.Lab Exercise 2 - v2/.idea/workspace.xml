@@ -5,37 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0a7a8a8-7f88-4dd1-8c3b-c67e0ca5fb01" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/ManPlane.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/ManPlane.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Walk_spritesheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Walk_spritesheet.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/idleDown.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/idleDown.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/idleLeft.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/idleLeft.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/idleRight.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/idleRight.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/idleUp.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/idleUp.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/idle_spritesheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/idle_spritesheet.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/walkDown.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/walkDown.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/walkLeft.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/walkLeft.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/walkRight.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/walkRight.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/walkUp.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/walkUp.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Prefabs/ManPlane.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Prefabs/ManPlane.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Prefabs/Plane.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Prefabs/Plane.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ManPlaneMovement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ManPlaneMovement.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/missle_boom.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/missle_boom.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/missle_flight.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/missle_flight.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Prefabs/AudioSource.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Prefabs/AudioSource.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Lab7.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Lab8.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Lab9.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Lab9.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab Exercise 2 - v2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab Exercise 2 - v2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/ManPlane.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/ManPlane.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prefabs/Missile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prefabs/Missile.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Missile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Missile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Lab-3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,9 +53,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lab7.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lab9.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ManPlaneMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Missile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Torpedo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -88,7 +78,7 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Lab-3&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Lab-4&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -162,7 +152,10 @@
       <workItem from="1707611395858" duration="1073000" />
       <workItem from="1708563294149" duration="2134000" />
       <workItem from="1708567386378" duration="5522000" />
-      <workItem from="1710365115069" duration="2681000" />
+      <workItem from="1710365115069" duration="6709000" />
+      <workItem from="1711511060553" duration="773000" />
+      <workItem from="1712188376716" duration="8529000" />
+      <workItem from="1712266857385" duration="2952000" />
     </task>
     <task id="LOCAL-00001" summary="new gitignor">
       <option name="closed" value="true" />
@@ -212,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708571695525</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="L4">
+      <option name="closed" value="true" />
+      <created>1710373227483</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710373227483</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +240,7 @@
     <MESSAGE value="update" />
     <MESSAGE value="remove idea" />
     <MESSAGE value="L3" />
-    <option name="LAST_COMMIT_MESSAGE" value="L3" />
+    <MESSAGE value="L4" />
+    <option name="LAST_COMMIT_MESSAGE" value="L4" />
   </component>
 </project>

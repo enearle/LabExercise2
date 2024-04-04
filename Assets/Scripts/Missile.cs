@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Missle : MonoBehaviour
+public class Missile : MonoBehaviour
 {
     // Init
     private Camera c;
@@ -16,7 +16,7 @@ public class Missle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        o.transform.position = gameObject.transform.position + new Vector3(0, 10, 0) * Time.deltaTime;
+        o.transform.position = gameObject.transform.position + new Vector3(0, 5, 0) * Time.deltaTime;
         
         Vector3 cameraSpace = c.WorldToScreenPoint(o.transform.position);
         
